@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#perfume{
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    padding: 30px;
+    width: 600px;
+}
+.card{
+    background-color: hsl(0,0%,100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    border-radius: 5px;
+}
+.card-content{
+    margin-top: 1.5rem;
+}
+.card-content h2{
+    letter-spacing: 5px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%); 
+}
+.card-content h1{
+    margin: 15px 0;
+    max-width: 200px;
+    color: hsl(212, 21%, 14%);
+    font-size: 30px;
+    font-family: "Fraunces", serif;
+}
+.card-content p{
+    margin-top: 1rem;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    font-family: "Fraunces", serif;
+    max-width: 230px;
+}
+.card-content .price p{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+}
+.card-content .price del{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    margin-left:15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.card img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.card .mob{
+    display: none;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: 1px solid hsl(228, 12%, 48%);
+    transition: .4s;
+    width: 220px;
+}
+.btn:hover{
+    background-color: hsl(160, 36%, 29%);
+}
+.btn svg{
+    margin-left: 25px;
+    margin-right: 13px;
+}
+
+/* resbonsive */
+
+@media (max-width: 600px) {
+    .card{
+        grid-template-columns: 1fr;
+    }
+    .card img {
+        display: none;
+        border-bottom-left-radius: 0px;
+    }
+    .card .mob{
+        display: block;
+        border-top-right-radius: 5px;
+    }
+    .card-content{
+        padding: 25px;
+        margin-top: 0;
+    }
+    .card-content h1{
+        max-width: 100%;
+    }
+    .card-content p{
+        max-width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
+    .btn svg{
+        margin-left: 3.6rem;
+    }
+}
